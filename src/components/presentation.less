@@ -1,0 +1,43 @@
+body, div, p {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.presentation-container {
+  height: 100%;
+  width: 100%;
+
+  background-color: blue;
+  color: white;
+
+  .slide-control {
+    height: 100%;
+    width: 5%;
+
+    background-color: transparent;
+
+    position: absolute;
+    z-index: 1;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    &.previous {
+      left: 0;
+    }
+
+    &.next {
+      right: 0;
+    }
+  }
+
+  .slide-container {
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+    float: left;
+  }
+}
