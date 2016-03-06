@@ -1,8 +1,6 @@
 import React from 'react';
 
-import slides from './Slides';
-
-require ('./presentation.less');
+require ('./Presentation.less');
 
 class Presentation extends React.Component {
   constructor (props) {
@@ -24,17 +22,17 @@ class Presentation extends React.Component {
 
   _nextSlide () {
     this.setState ({
-      slideIndex: Math.min (this.state.slideIndex + 1, slides.length - 1)
+      slideIndex: Math.min (this.state.slideIndex + 1, this.props.slides.length - 1)
     });
   }
 
   render () {
-    const CurrentSlide = slides[this.state.slideIndex];
+    const CurrentSlide = this.props.slides[this.state.slideIndex];
 
     return (
       <div className="presentation-container">
         <div className="previous slide-control" onClick={ this._previousSlide }>
-          
+
         </div>
         <div className="slide-container">
           <CurrentSlide />

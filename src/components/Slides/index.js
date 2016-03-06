@@ -1,13 +1,9 @@
-let slides = [];
+// pull in default slide styles
+require ('./default.less');
 
-// grab all of the slides in the directory
-// stop looking when we hit a number that doesn't resolve
-for (let i = 1; ; i++) {
-  try {
-    slides.push (require ('./' + i));
-  } catch (error) {
-    break;
-  }
-}
-
-export default slides;
+export default [
+  require ('./Title'),
+  require ('./Introductions'),
+  require ('./Agenda'),
+  require ('./Warning')
+];
