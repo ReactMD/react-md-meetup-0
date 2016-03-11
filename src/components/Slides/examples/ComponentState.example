@@ -1,0 +1,34 @@
+// made with FormidableLabs/component-playground
+
+class ComponentStateExample extends React.Component {
+  constructor (props) {
+    // boring boilerplate
+    super (props);
+    this._incrementCounter = this._incrementCounter.bind (this);
+
+    // set the initial state
+    this.state = {
+      count: 0
+    };
+  }
+
+  _incrementCounter () {
+    this.setState ({ count: this.state.count + 1 });
+  }
+
+  render () {
+    return (
+      <div>
+        <button onClick={ this._incrementCounter } >
+          Increment!
+        </button>
+        <p>
+          { this.state.count }
+        </p>
+      </div>
+    );
+  }
+};
+
+// mount node is particular to this Playground component
+ReactDOM.render (<ComponentStateExample/>, mountNode);

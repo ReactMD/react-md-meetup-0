@@ -1,0 +1,11 @@
+class Title extends React.Component {
+  render () {
+    return (
+      <div className="slide title-slide center-content">
+        <h1 style={{"font-size": "6em"}}>React MD</h1>
+      </div>
+    );
+  }
+};
+
+ReactDOM.render (<Title/>, mountNode);
