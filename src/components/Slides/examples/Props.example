@@ -1,0 +1,48 @@
+class PropsExample extends React.Component {
+  constructor (props) {
+    // boring boilerplate
+    super (props);
+    this._incrementCounter = this._incrementCounter.bind (this);
+
+    // set the initial state
+    this.state = {
+      count: 0
+    };
+  }
+
+  _incrementCounter () {
+    this.setState ({ count: this.state.count + 1 });
+  }
+
+  render () {
+    return (
+      <div>
+        <MyButton onClick={ this._incrementCounter } >
+          Increment!
+        </MyButton>
+        <NumberDisplay number={ this.state.count } />
+      </div>
+    );
+  }
+};
+
+class MyButton extends React.Component {
+  render () {
+    return (
+      <button onClick={this.props.onClick}>
+        { this.props.children }
+      </button>
+    );
+  }
+};
+
+class NumberDisplay extends React.Component {
+  render () {
+    return (
+      <p>{ this.props.number }</p>
+    );
+  }
+};
+
+// mount node is particular to this Playground component
+ReactDOM.render (<PropsExample/>, mountNode);

@@ -1,5 +1,3 @@
-// made with FormidableLabs/component-playground
-
 class ComponentStateExample extends React.Component {
   constructor (props) {
     // boring boilerplate

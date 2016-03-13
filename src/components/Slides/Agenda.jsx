@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 
+import Slide from '../Presentation/Slide';
+
 class Agenda extends Component {
   render () {
     return (
-      <div className="slide">
-        <div className="title">
-          Agenda
-        </div>
+      <Slide title="Agenda" padded>
         <div className="content">
           <ul>
             <li>Why React?</li>
@@ -21,7 +20,7 @@ class Agenda extends Component {
             <li>Adding some slides</li>
           </ul>
         </div>
-      </div>
+      </Slide>
     );
   }
 };

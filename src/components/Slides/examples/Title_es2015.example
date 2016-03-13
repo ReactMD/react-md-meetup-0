@@ -2,7 +2,7 @@ class Title extends React.Component {
   render () {
     return (
       <div className="slide title-slide center-content">
-        <h1 style={{"font-size": "6em"}}>React MD</h1>
+        <h1 style={{"fontSize": "3em"}}>React MD</h1>
       </div>
     );
   }

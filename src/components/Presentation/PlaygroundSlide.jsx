@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Playground from 'component-playground';
 
+import Slide from './Slide';
+
 require ('./PlaygroundSlide.less');
 
 class PlaygroundSlide extends React.Component {
@@ -11,24 +13,26 @@ class PlaygroundSlide extends React.Component {
       React: React,
       ReactDOM: ReactDOM
     };
-    
+
+    let { codeText, ...otherProps } = this.props;
+
     return (
-      <div className="slide">
+      <Slide { ...otherProps } >
         <Playground
           noRender={ false }
           codeText={this.props.codeText}
           scope={scope}
         />
-      </div>
+      </Slide>
     );
   }
 };
 
-export const createPlaygroundSlide = (codeText) => {
+export const createPlaygroundSlide = (codeText, baseProps) => {
 
   // return a stateless component to be constructed later
   return (props) => (
-    <PlaygroundSlide codeText={codeText} { ...props }/>
+    <PlaygroundSlide codeText={codeText} { ...Object.assign ({}, baseProps, props) }/>
   );
 };
 

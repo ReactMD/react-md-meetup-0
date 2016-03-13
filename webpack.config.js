@@ -23,6 +23,11 @@ module.exports = {
         test: /\.less$/,
         include: __dirname + "/src",
         loader: "style!css!less"
+      },
+      {
+        test: /\.png$/,
+        exclude: /node_modules/,
+        loader: "url-loader?limit=10000&mimetype=image/png"
       }
     ]
   },

@@ -1,17 +1,31 @@
 .slide {
   background-color: blue;
+  background: url(../../../public/images/gradient_background-dark-01.png);
+  background-size: 100%;
   color: white;
 
-  .content, .title {
-    padding-left: 10%;
+  /* any nested slides shouldn't have backgrounds */
+  .slide {
+    background: none;
+
+    ;
   }
 
   .title {
-    font-size: 5em;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
   }
 
   .content {
-    font-size: 2.5em;
+    height: 100%;
+    font-size: 2.5rem;
+  }
+
+  .title ~ .content {
+    height: 90%;
   }
 }
 
@@ -19,4 +33,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
 }

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 
+import Slide from '../Presentation/Slide';
+
 class Introductions extends Component {
   render () {
     return (
-      <div>Introductions page</div>
+      <Slide title="Introductions" padded>
+        Hi
+      </Slide>
     );
   }
 };
