@@ -3,7 +3,7 @@ var webpack = require ('webpack');
 module.exports = {
   devtool: "eval-source-maps",
   entry:  [
-    //"webpack/hot/dev-server",
+    "webpack/hot/dev-server",
     __dirname + "/src/index.js"
   ],
   output: {
