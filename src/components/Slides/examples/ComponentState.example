@@ -17,9 +17,9 @@ class ComponentStateExample extends React.Component {
   render () {
     return (
       <div>
-        <button onClick={ this._incrementCounter } >
+        <div className="button" onClick={ this._incrementCounter } >
           Increment!
-        </button>
+        </div>
         <p>
           { this.state.count }
         </p>

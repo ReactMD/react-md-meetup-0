@@ -1,6 +1,7 @@
 import { createPlaygroundSlide } from '../Presentation/PlaygroundSlide';
 import ClosingSlides from './ClosingSlides';
 import OpeningSlides from './OpeningSlides';
+import Exercises from './Exercises';
 
 // pull in default slide styles
 require ('./default.less');
@@ -55,8 +56,8 @@ export default [
   require ('./ThisPresentation'),
   require ('./OtherStuff'),
 
-  /* Exercises */
-
+  /* see /Exercises/index.js */
+  ...Exercises,
 
   /* see /ClosingSlides/index.js */
   ...ClosingSlides
