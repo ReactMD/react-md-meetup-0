@@ -1,14 +1,14 @@
 import { createPlaygroundSlide } from '../Presentation/PlaygroundSlide';
+import ClosingSlides from './ClosingSlides';
+import OpeningSlides from './OpeningSlides';
 
 // pull in default slide styles
 require ('./default.less');
 
 // this array dictates the slides present in the deck and the order
 export default [
-  /* opening slides */
-  require ('./Title'),
-  require ('./Introductions'),
-  require ('./Agenda'),
+  /* see /OpeningSlides/index.js */
+  ...OpeningSlides,
 
   /* why react? */
   require ('./WhyReact'),
@@ -52,16 +52,12 @@ export default [
   ),
 
   /* Presentation Application */
-  // this is an Application
-  // what's all this stuff
+  require ('./ThisPresentation'),
+  require ('./OtherStuff'),
 
   /* Exercises */
 
 
-  /* closing slides */
-  // why react? revisited
-  // questions?
-  // feedback
-  // future react meetup topics
-  // future ecosystem talk / tech talk ideas
+  /* see /ClosingSlides/index.js */
+  ...ClosingSlides
 ];

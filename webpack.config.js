@@ -3,7 +3,7 @@ var webpack = require ('webpack');
 module.exports = {
   devtool: "eval-source-maps",
   entry:  [
-    "webpack/hot/dev-server",
+    //"webpack/hot/dev-server",
     __dirname + "/src/index.js"
   ],
   output: {
@@ -27,7 +27,7 @@ module.exports = {
       {
         test: /\.png$/,
         exclude: /node_modules/,
-        loader: "url-loader?limit=10000&mimetype=image/png"
+        loader: "url-loader?mimetype=image/png"
       }
     ]
   },
@@ -43,7 +43,6 @@ module.exports = {
     },
     historyApiFallback: true,
     progress: true,
-    hot: true,
     port: 3000
   }
 };

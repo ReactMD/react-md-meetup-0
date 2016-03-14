@@ -8,6 +8,8 @@ class Slide extends React.Component {
     let _contentClassnames = "content";
     if (this.props.padded) _contentClassnames += " padded";
 
+    let _slideClassnames = "slide";
+
     return (
       <div className="slide">
         {
