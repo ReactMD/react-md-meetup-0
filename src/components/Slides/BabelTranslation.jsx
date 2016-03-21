@@ -44,7 +44,7 @@ class BabelTranslation extends React.Component {
             </pre>
           </Slide>
         </div>
-        <img src="../images/babel.png" style={{position: "absolute", top: "20%", left: "35%", width: "20%"}} />
+        <img src="/images/babel.png" style={{position: "absolute", top: "20%", left: "35%", width: "20%"}} />
         <div style={{height: '100%', width: '45%', float: 'right'}}>
           <Slide title="JavaScript" padded={true}>
             <pre>

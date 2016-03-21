@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Presentation for the dry run of the first Visionist React MD meetup",
   "scripts": {
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.prod.js",
     "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --hot"
   },
   "author": "Visionist, Inc.",
