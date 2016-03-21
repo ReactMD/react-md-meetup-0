@@ -7,7 +7,7 @@ class Title extends Component {
     return (
       <div className="slide title-slide center-content">
         <div>
-          <img src="/images/reactmd_logo-white-07.png" />
+          <img src="images/reactmd_logo-white-07.png" />
           <h2>Hello, React! (and friends)</h2>
         </div>
       </div>
