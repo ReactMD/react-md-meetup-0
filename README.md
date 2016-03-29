@@ -21,14 +21,3 @@ Browse to [localhost:3000/webpack-dev-server/](localhost:3000/webpack-dev-server
 ## Adding slides
 
 Add the root component of your slide to the array being exported in `/src/components/Slides/index.js`.  Slides are rendered in the order they appear in that array.
-
-## Updating the `gh-pages` branch
-
-We want to build all of our static files in the public directory (which is where `webpack-dev-server` serves content from) and have that be the root of the `gh-pages` branch.
-
-```shell
-npm run build
-git subtree push --prefix public origin gh-pages
-```
-
-Reference [this gist](https://gist.github.com/cobyism/4730490) for more information.
