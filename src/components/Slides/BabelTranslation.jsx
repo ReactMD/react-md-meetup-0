@@ -38,7 +38,7 @@ class BabelTranslation extends React.Component {
     return (
       <Slide>
         <div style={{height: '100%', width: '45%', float: 'left'}}>
-          <Slide title="JSX" padded={true}>
+          <Slide title="JSX" nested={true}>
             <pre>
               { jsxExample }
             </pre>
@@ -46,7 +46,7 @@ class BabelTranslation extends React.Component {
         </div>
         <img src="images/babel.png" style={{position: "absolute", top: "20%", left: "35%", width: "20%"}} />
         <div style={{height: '100%', width: '45%', float: 'right'}}>
-          <Slide title="JavaScript" padded={true}>
+          <Slide title="JavaScript" nested={true}>
             <pre>
               { jsExample }
             </pre>
