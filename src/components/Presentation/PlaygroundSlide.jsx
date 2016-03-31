@@ -17,7 +17,7 @@ class PlaygroundSlide extends React.Component {
     let { codeText, ...otherProps } = this.props;
 
     return (
-      <Slide { ...otherProps } >
+      <Slide wide={true} { ...otherProps } >
         <Playground
           noRender={ false }
           codeText={this.props.codeText}

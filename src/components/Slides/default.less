@@ -12,37 +12,76 @@
   }
 
   .title {
-    height: 10%;
-    width: 100%;
+    min-height: 100px;
+    padding: 50px 0 15px 0;
+    max-width: 1028px;
     text-align: center;
+    margin: auto;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 5em;
   }
 
   .content {
     height: 100%;
     font-size: 2.5rem;
+
+    li {
+      margin-bottom: .5em;
+    }
   }
 
   .title ~ .content {
-    height: 90%;
+    max-width: 1028px;
+    margin: auto;
   }
 
   .button {
     -webkit-border-radius: 8;
     -moz-border-radius: 8;
     border-radius: 8px;
-    color: #ffffff;
+    color: #000000;
     font-size: 47px;
-    background: #A6E22F;
+    font-weight: bold;
+    background: #FCFF42;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    text-align: center;   
   }
 
   .button:hover {
     background: #A6FF2F;
     cursor: pointer;
     text-decoration: none;
+  }
+ 
+  .content-wide {
+    width: 100%;
+    
+    .playground {
+      overflow: hidden; 
+      .playgroundCode {
+        width: 50%;
+        font-size: 2em;
+        background-color: rgba(0, 0, 0, 0.6);
+        
+        .playgroundStage {
+          padding: 5%;
+          .CodeMirror {
+            height: 85%;
+          }
+        }
+      }
+
+      .playgroundPreview {
+        width: 50%;
+        font-size: 2em;
+      }
+    }
+    
+
+    .CodeMirror {
+      background-color: rgba(0, 0, 0, 0);
+    }   
   }
 }
 
@@ -52,4 +91,20 @@
   align-items: center;
 
   text-align: center;
+
+  img {
+    max-width:100%;
+  }
+
+}
+
+.nested {
+
+  .title{
+    font-size: 2.5em;
+  }
+  .content {
+    margin: auto;
+    padding: 25px;
+  }
 }
