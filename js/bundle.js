@@ -109499,7 +109499,7 @@
 	              _react2.default.createElement(
 	                'li',
 	                null,
-	                'if the end result is different, just update the part of the part of the DOM that changed'
+	                'if the end result is different, just update the part of the DOM that changed'
 	              ),
 	              _react2.default.createElement(
 	                'li',
@@ -109609,7 +109609,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var bullets = ["Originally \"6to5\"", "Goal: \"use next generation JavaScript, today\"", "Transpiles ES2015, experimental language features, JSX, and more to" + "a feature set that all modern browsers can consume"];
+	var bullets = ["Originally \"6to5\"", "Goal: \"use next generation JavaScript, today\"", "Transpiles ES2015, experimental language features, JSX, and more to " + "a feature set that all modern browsers can consume"];
 
 	var Babel = function (_React$Component) {
 	  _inherits(Babel, _React$Component);
