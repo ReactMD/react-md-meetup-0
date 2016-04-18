@@ -1,0 +1,36 @@
+.todolist-solution {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  > div {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .new-todo {
+    input {
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 1em;
+      width: 80%;
+      float: left;
+    }
+
+    .button {
+      float: right;
+      font-size: 1em;
+    }
+  }
+
+  .todolist {
+    text-align: left;
+
+    .todo-done {
+      text-decoration: line-through;
+    }
+  }
+}
