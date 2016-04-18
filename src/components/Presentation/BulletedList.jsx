@@ -11,7 +11,7 @@ class BulletedList extends React.Component {
     if (Array.isArray (item)) {
       // map it to create list item
       return (
-        <ul>
+        <ul key={ index }>
           { item.map (this._createListItem) }
         </ul>
       )
