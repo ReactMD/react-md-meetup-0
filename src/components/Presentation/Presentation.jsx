@@ -1,6 +1,7 @@
 import React from 'react';
 
-require ('./Presentation.less');
+import normalizeCss from 'normalize.css/normalize.css';
+import styles from  './Presentation.less';
 
 class Presentation extends React.Component {
   constructor (props) {

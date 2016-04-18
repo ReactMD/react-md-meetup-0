@@ -20,8 +20,7 @@ module.exports = {
         loader: 'babel'
       },
       {
-        test: /\.less$/,
-        include: __dirname + "/src",
+        test: /\.(less|css)$/,
         loader: "style!css!less"
       },
       {

@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "component-playground": "^1.2.0",
+    "normalize.css": "^4.1.1",
     "react": "^0.14.7",
     "react-addons-update": "^15.0.1",
     "react-dom": "^0.14.7"
