@@ -23,6 +23,6 @@ class Slide extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default Slide;

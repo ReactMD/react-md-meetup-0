@@ -1,44 +1,84 @@
-body, div {
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
-.presentation-container {
+html, body, #react-mount, .presentation-container, .slide-container, .slide-container > .slide {
   height: 100%;
-  width: 100%;
-  overflow: hidden;
+}
 
-  .slide-control {
-    height: 100%;
-    width: 5%;
+body {
+  font-family: "proxima-nova", helvetica, sans-serif;
+}
 
-    background-color: transparent;
+.slide-control {
+  height: 100%;
+  width: 5%;
 
-    position: absolute;
-    z-index: 1;
+  background-color: rgba(0, 0, 0, 0.1);
 
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.5);
-    }
+  position: absolute;
+  top: 0;
+  z-index: 1;
 
-    &.previous {
-      left: 0;
-    }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 
-    &.next {
-      right: 0;
+    &.previous, &.next {
+      &:before {
+        color: rgba(255, 255, 255, 1);
+      }
     }
   }
 
-  .slide-container {
-    height: 100%;
-    width: 100%;
+  cursor: pointer;
 
-    position: relative;
-    float: left;
+  &.previous, &.next {
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-    .slide {
-      height: 100%;
+      font-size: 1em;
+      @media only screen and (min-width: 768px) {
+        font-size: 2em;
+      }
 
+      color: rgba(255, 255, 255, 0.5);
     }
+  }
+
+  &.previous {
+    left: 0;
+    &:before {
+      content: '<';
+    }
+  }
+
+  &.next {
+    right: 0;
+    &:before {
+      content: '>';
+    }
+  }
+}
+
+.text-dynamic {
+  &-md {
+    @media only screen and (min-width: 1250px) {
+      font-size: 1.5vw;
+    }
+
+    @media only screen and (max-width: 1249px) {
+      font-size: 0.5em;
+    }
+  }
+}
+
+.row-lg {
+  @media only screen and (min-width: 1250px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
