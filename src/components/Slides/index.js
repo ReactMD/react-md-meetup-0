@@ -2,6 +2,7 @@ import { createPlaygroundSlide } from '../Presentation/PlaygroundSlide';
 import ClosingSlides from './ClosingSlides';
 import OpeningSlides from './OpeningSlides';
 import Exercises from './Exercises';
+import Solutions from './Solutions';
 
 // pull in default slide styles
 require ('./default.less');
@@ -56,8 +57,11 @@ export default [
   require ('./ThisPresentation'),
   require ('./OtherStuff'),
 
-  /* see /Exercises/index.js */
-  ...Exercises,
+  /* Solution and Exercise pairs */
+  Solutions.Multiplication,
+  Exercises.Multiplication,
+  Solutions.TodoList,
+  Exercises.TodoList,
 
   /* see /ClosingSlides/index.js */
   ...ClosingSlides
