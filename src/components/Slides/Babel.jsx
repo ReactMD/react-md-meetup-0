@@ -5,7 +5,7 @@ import { BulletedList, Slide } from '../Presentation';
 const bullets = [
   "Originally \"6to5\"",
   "Goal: \"use next generation JavaScript, today\"",
-  "Transpiles ES2015, experimental language features, JSX, and more to" +
+  "Transpiles ES2015, experimental language features, JSX, and more to " +
   "a feature set that all modern browsers can consume"
 ];
 

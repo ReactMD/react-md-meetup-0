@@ -15,7 +15,7 @@ class VirtualDOM extends React.Component {
             <ul>
               <li>much cheaper, much leaner</li>
               <li>
-                if the end result is different, just update the part of the part
+                if the end result is different, just update the part
                 of the DOM that changed
               </li>
               <li>if nothing is different, don't update anything</li>
