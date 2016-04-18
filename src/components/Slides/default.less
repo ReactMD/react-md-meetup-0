@@ -1,13 +1,25 @@
 .slide {
-  display: flex;
-  flex-direction: column;
-  max-height: 100%;
-  overflow: hidden;
+  &:not(.nested) {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    overflow: hidden;
 
-  padding: 0 5%;
-  background-color: blue;
-  background: url(../../../public/images/gradient_background-dark-01.png) no-repeat center center fixed;
-  background-size: cover;
+    padding: 0 5%;
+    background-color: blue;
+    background: url(../../../public/images/gradient_background-dark-01.png) no-repeat center center fixed;
+    background-size: cover;
+
+    >.content, >.content-wide {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      padding: 25px 15px 25px 15px;
+    }
+  }
+
   color: white;
 
   /* any nested slides shouldn't have backgrounds */
@@ -25,12 +37,6 @@
   }
 
   .content, .content-wide {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-
-    padding: 25px 15px 25px 15px;
     width: 100%;
 
     ul {
@@ -108,9 +114,14 @@
 }
 
 .nested {
-
   .title{
-    font-size: 2.5em;
+    @media only screen and (min-width: 1250px) {
+      font-size: 7vw;
+    }
+
+    @media only screen and (max-width: 1249px) {
+      font-size: 2em;
+    }
   }
   .content {
     margin: auto;

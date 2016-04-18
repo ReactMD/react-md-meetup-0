@@ -40,7 +40,9 @@ body {
       transform: translate(-50%, -50%);
 
       font-size: 1em;
-      @media only screen and (min-width : 768px) { font-size: 2em; }
+      @media only screen and (min-width: 768px) {
+        font-size: 2em;
+      }
 
       color: rgba(255, 255, 255, 0.5);
     }
@@ -58,5 +60,25 @@ body {
     &:before {
       content: '>';
     }
+  }
+}
+
+.text-dynamic {
+  &-md {
+    @media only screen and (min-width: 1250px) {
+      font-size: 1.5vw;
+    }
+
+    @media only screen and (max-width: 1249px) {
+      font-size: 0.5em;
+    }
+  }
+}
+
+.row-lg {
+  @media only screen and (min-width: 1250px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

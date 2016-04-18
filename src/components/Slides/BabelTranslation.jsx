@@ -3,12 +3,12 @@ import React from 'react';
 import Slide from '../Presentation/Slide';
 
 const styles = {
-  height: "100%",
-}
+  height: "100%"
+};
 
 const jsxExample = `` +
 `<div className="container">\n` +
-`  <p> This is so neat</p>\n` +
+`  <p>This is so neat</p>\n` +
 `\n` +
 `  <ul>\n` +
 `    <li>Item 1</li>\n` +
@@ -37,24 +37,29 @@ class BabelTranslation extends React.Component {
   render () {
     return (
       <Slide>
-        <div style={{height: '100%', width: '45%', float: 'left'}}>
-          <Slide title="JSX" nested={true}>
-            <pre>
-              { jsxExample }
-            </pre>
-          </Slide>
-        </div>
-        <img src="images/babel.png" style={{position: "absolute", top: "20%", left: "35%", width: "20%"}} />
-        <div style={{height: '100%', width: '45%', float: 'right'}}>
-          <Slide title="JavaScript" nested={true}>
-            <pre>
-              { jsExample }
-            </pre>
-          </Slide>
+        <div className="row-lg">
+          <div style={{textAlign: 'center'}}>
+            <Slide title="JSX" nested={true}>
+              <pre className="text-dynamic-md" style={{display: 'inline-block', textAlign: 'left'}}>
+                { jsxExample }
+              </pre>
+            </Slide>
+          </div>
+          <div style={{display: 'flex', flexDirection: 'column',
+                      justifyContent: 'center', alignItems: 'center'}}>
+            <img src="images/babel.png" style={{width: "250px"}} />
+          </div>
+          <div style={{textAlign: 'center'}}>
+            <Slide title="JavaScript" nested={true}>
+              <pre className="text-dynamic-md" style={{display: 'inline-block', textAlign: 'left'}}>
+                { jsExample }
+              </pre>
+            </Slide>
+          </div>
         </div>
       </Slide>
     );
   }
-};
+}
 
 export default BabelTranslation;
