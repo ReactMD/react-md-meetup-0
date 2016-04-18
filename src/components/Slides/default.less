@@ -1,10 +1,14 @@
 .slide {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+
+  padding: 0 5%;
   background-color: blue;
   background: url(../../../public/images/gradient_background-dark-01.png) no-repeat center center fixed;
   background-size: cover;
   color: white;
-
-  font-family: "proxima-nova", helvetica, sans-serif;
 
   /* any nested slides shouldn't have backgrounds */
   .slide {
@@ -20,18 +24,26 @@
     font-size: 5em;
   }
 
-  .content {
-    height: 100%;
-    font-size: 2.5rem;
+  .content, .content-wide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 
-    li {
-      margin-bottom: .5em;
+    padding: 25px 15px 25px 15px;
+    width: 100%;
+
+    ul {
+      margin: 0;
     }
   }
 
-  .title ~ .content {
-    max-width: 1028px;
-    margin: auto;
+  .content {
+    font-size: 2.5rem;
+
+    li {
+      line-height: 1.5em;
+    }
   }
 
   .button {
@@ -57,18 +69,12 @@
     width: 100%;
 
     .playground {
+      flex: 1;
       overflow: hidden;
       .playgroundCode {
         width: 50%;
         font-size: 2em;
         background-color: rgba(0, 0, 0, 0.6);
-
-        .playgroundStage {
-          padding: 5%;
-          .CodeMirror {
-            height: 85%;
-          }
-        }
       }
 
       .playgroundPreview {
@@ -80,6 +86,10 @@
 
     .CodeMirror {
       background-color: rgba(0, 0, 0, 0);
+    }
+
+    .CodeMirror-scroll {
+      padding: 5%;
     }
   }
 }

@@ -20,9 +20,9 @@ class Presentation extends React.Component {
 
   _handleKeyPress (event) {
     // not interested when it happens in an input
-    if (event.target.type === 'textarea') {
-      return;
-    } else if (event.keyCode === 37 || event.keyCode === 38) {
+    if (event.target.type === 'textarea') return;
+
+    if (event.keyCode === 37 || event.keyCode === 38) {
       this._previousSlide ();
     } else if (event.keyCode === 39 || event.keyCode === 40) {
       this._nextSlide ();
@@ -46,18 +46,16 @@ class Presentation extends React.Component {
 
     return (
       <div className="presentation-container">
-        <div className="previous slide-control" onClick={ this._previousSlide }>
+        <div className="previous slide-control" onClick={ this._previousSlide }></div>
 
-        </div>
         <div className="slide-container">
           <CurrentSlide />
         </div>
-        <div className="next slide-control" onClick={ this._nextSlide }>
 
-        </div>
+        <div className="next slide-control" onClick={ this._nextSlide }></div>
       </div>
     );
   }
-};
+}
 
 export default Presentation;

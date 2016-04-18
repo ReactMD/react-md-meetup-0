@@ -10,6 +10,6 @@ class Introductions extends Component {
       </Slide>
     );
   }
-};
+}
 
 export default Introductions;

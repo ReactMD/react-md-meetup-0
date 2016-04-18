@@ -13,6 +13,6 @@ class Title extends Component {
       </div>
     );
   }
-};
+}
 
 export default Title;
