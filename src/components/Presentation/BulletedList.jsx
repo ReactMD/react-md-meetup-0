@@ -17,7 +17,7 @@ class BulletedList extends React.Component {
       )
     } else {
       return (
-        <li>{ item }</li>
+        <li key={ index }>{ item }</li>
       );
     }
   }
