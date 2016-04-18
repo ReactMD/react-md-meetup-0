@@ -1,23 +1,37 @@
 .playground {
+  display: flex;
+
   .playgroundCode {
-    height: 100%;
     width: 50%;
     float: left;
+    overflow: auto;
 
     .playgroundStage, .CodeMirror {
-      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .CodeMirror {
+      height: auto;
       background: rgba(0,0,0,0.6);
     }
   }
 
+  .playgroundCode, .playgroundPreview, .playgroundPreview > div, .previewArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .previewArea {
+    //justify-content: center;
+  }
+
   .playgroundPreview {
-    height: 100%;
     float: left;
     padding-left: 20px;
 
-    max-width: 40%;
+    max-width: 50%;
   }
 }
