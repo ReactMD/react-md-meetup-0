@@ -20,10 +20,6 @@ module.exports = {
         loader: "style!css!less"
       },
       {
-        test: /.css$/,
-        loaders: ['style-loader', 'css-loader']
-      },
-      {
         test: /\.png$/,
         exclude: /node_modules/,
         loader: "url-loader?mimetype=image/png"
