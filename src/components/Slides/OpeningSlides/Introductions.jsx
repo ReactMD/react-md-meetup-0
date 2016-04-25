@@ -6,7 +6,7 @@ class Introductions extends Component {
   render () {
     return (
       <Slide title="Introductions" padded>
-        Hi
+        <p>Hey</p>
       </Slide>
     );
   }

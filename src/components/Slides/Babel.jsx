@@ -15,7 +15,7 @@ class Babel extends React.Component {
       <Slide title="Babel" padded={true}>
         <BulletedList items={ bullets } />
         <div className="footer">
-          React is not nearly as enjoyable without Babel's help.
+          Babel makes React more fun
         </div>
       </Slide>
     );
