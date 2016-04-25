@@ -3,7 +3,7 @@ import React from 'react';
 import { Slide } from '../../Presentation';
 
 const code = `_onDoneClick = (index) => {
-  let newItems = this.state.items;
+  let newItems = deepcopy(this.state.items);
   newItems[index].done = true;
 
   this.setState ({

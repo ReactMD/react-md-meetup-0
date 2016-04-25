@@ -14,12 +14,13 @@ export default [
 
   // React MD title slide
   require ('./OpeningSlides/Title'),
-  // Quick agenda
-  require ('./OpeningSlides/Agenda'),
   // I'm Mark TODO
   require ('./OpeningSlides/Introductions'),
   // does everyone have it running? helpers
   require ('./OpeningSlides/Help'),
+
+  // Quick agenda
+  require ('./OpeningSlides/Agenda'),
 
   /* about this presentation */
 
@@ -46,11 +47,13 @@ export default [
   require ('./JSX/WithinRender'),
 
   /* babel */
+  // TODO My browser doesn't understand this? *table flip*
 
-  // but wait my browser doesn't support that!
-  require ('./BabelTranslation'),
+
   // what the heck is babel?
   require ('./Babel'),
+  // but wait my browser doesn't support that!
+  require ('./BabelTranslation'),
 
   /* componentization */
 
@@ -74,11 +77,11 @@ export default [
   require ('./Componentization/BasicTodoList'),
   // but now they all say the same thing!  use this.props.children
   require ('./Componentization/TodoListItem'),
-  // Slide does the same thing - watch what happens when we remove it
-  require ('./Componentization/TodoListSlide'),
   // so now we have our TodoList component with TodoListItem separated out
   // Slide using another prop called 'title'
   require ('./Componentization/TodoListFinal'),
+  // Slide does the same thing - watch what happens when we remove it
+  require ('./Componentization/TodoListSlide'),
 
   /* props */
 
