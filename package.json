@@ -4,7 +4,8 @@
   "description": "Presentation for the dry run of the first Visionist React MD meetup",
   "scripts": {
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.prod.js",
-    "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --hot"
+    "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --hot",
+    "exercises": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --hot --config webpack.config.exercises.js"
   },
   "author": "Visionist, Inc.",
   "license": "MIT",

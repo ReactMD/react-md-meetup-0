@@ -1,6 +1,6 @@
-# React MD Meetup 0
+# React MD Meetup
 
-This is the presentation for the zero-th (dry run) of the React MD meetup hosted by Visionist.
+This is the presentation for the first React MD meetup hosted by Visionist.
 
 ## Goals
 
@@ -17,6 +17,20 @@ npm run dev
 ```
 
 Browse to [localhost:3000/webpack-dev-server/](localhost:3000/webpack-dev-server).
+
+### Doing the exercises
+
+When working through the exercises, run:
+
+```shell
+npm run exercises
+```
+
+Then, browse to [localhost:3001/webpack-dev-server/](localhost:3001/webpack-dev-server).
+
+The only difference is that this build only contains four slides, so if you make a change that restarts you at the beginning of the deck or you have to refresh manually, you don't have to find your place in the presentation again.
+
+This can be run in parallel with `npm run dev`.
 
 ## Adding slides
 
