@@ -22,11 +22,46 @@ class Presentation extends React.Component {
     // not interested when it happens in an input
     if (event.target.type === 'textarea') return;
 
-    if (event.keyCode === 37 || event.keyCode === 38) {
-      this._previousSlide ();
-    } else if (event.keyCode === 39 || event.keyCode === 40) {
-      this._nextSlide ();
+
+    switch (event.keyCode) {
+
+      //left arrow
+      case 37:
+      //up arrow
+      case 38:
+      //page up
+      case 33:
+        this._previousSlide ();
+        break;
+
+      //right arrow
+      case 39:
+      //down arrow
+      case 40:
+      //page down
+      case 34:
+        this._nextSlide ();
+        break;
+
+      //home
+      case 36:
+        this._gotoSlide(0);
+        break;
+
+      //end
+      case 35:
+        this._gotoSlide(this.props.slides.length);
+        break;
+      
+  
     }
+
+  }
+
+  _gotoSlide (slide) {
+    this.setState ({
+      slideIndex: Math.max(0, Math.min(this.props.slides.length - 1, slide))
+    });
   }
 
   _previousSlide () {
