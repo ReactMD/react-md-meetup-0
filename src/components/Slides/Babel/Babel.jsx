@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BulletedList, Slide } from '../Presentation';
+import { BulletedList, Slide } from '../../Presentation';
 
 const bullets = [
   "Originally \"6to5\"",

@@ -1,21 +1,17 @@
 import React from 'react';
 
-import { BulletedList, Slide } from '../../Presentation';
-
-const bullets = [
-  "very simple application",
-  "start with /src/index.js, follow dependencies from there"
-];
+import { Slide } from '../../Presentation';
 
 class ThisPresentation extends React.Component {
   render () {
     return (
-      <Slide title="This Presentation is Built With React" padded>
-        <BulletedList items={ bullets } />
-        <div>
-          <p>To run: npm run dev</p>
-          <p>localhost:3000/webpack-dev-server/</p>
-        </div>
+      <Slide title="Presentation App" padded>
+        <ul>
+          <li>very simple application</li>
+          <li>start with /src/index.js, follow dependencies from there</li>
+          <li>To run: <tt>npm run dev</tt></li>
+          <li>Browse to: <a href="localhost:3000/webpack-dev-server/">localhost:3000/webpack-dev-server/</a></li>
+        </ul>
       </Slide>
     );
   }

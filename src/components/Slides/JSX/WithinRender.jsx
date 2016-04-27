@@ -25,7 +25,7 @@ return (
 class TodoListJSX extends React.Component {
   render () {
     return (
-      <Slide title="jsx in action">
+      <Slide title="using jsx">
         <pre style={{ fontSize: ".8em" }}>
           { exampleJSX }
         </pre>

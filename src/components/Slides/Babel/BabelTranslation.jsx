@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Slide from '../Presentation/Slide';
+import Slide from '../../Presentation/Slide';
 
 const styles = {
   height: "100%"

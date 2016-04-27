@@ -24,6 +24,7 @@ export default [
 
   /* about this presentation */
 
+  require ('./AboutThisPresentation/Splash'),
   // obviously, this is a web application
   require ('./AboutThisPresentation/ThisPresentation'),
   // what the heck is webpack
@@ -41,22 +42,28 @@ export default [
   require ('./JSX/TodoListJSX'),
   // so, how do we use this?  new thing: render ()
   require ('./JSX/WithinRender'),
-  // why do I need that?  What's the alternative?
+  // browser's don't support this!
+  require ('./JSX/NoSupport'),
+  // What's the alternative?
   require ('./JSX/TodoListReactDOM'),
-  // show that jsx again
-  require ('./JSX/WithinRender'),
+  // nooooooooooooooooooooooooo!
+  require ('./JSX/TableFlip'),
 
   /* babel */
-  // TODO My browser doesn't understand this? *table flip*
 
-
+  require ('./Babel/ToTheRescue'),
   // what the heck is babel?
-  require ('./Babel'),
+  require ('./Babel/Babel'),
   // but wait my browser doesn't support that!
-  require ('./BabelTranslation'),
+  require ('./Babel/BabelTranslation'),
+  // and now we can use our pretty JSX code
+  require ('./JSX/WithinRender'),
+  // but now what do i do with it?
+  require ('./JSX/NowWhat'),
 
   /* componentization */
 
+  require ('./Componentization/Splash'),
   // ok so we have our jsx code in our render method, now what
   require ('./Componentization/TodoListComponent'),
   // so what does that component look like?
@@ -65,6 +72,7 @@ export default [
     { title: 'todo list component' }
   ),
   // so what makes good components?
+  require ('./Componentization/WhatComponents'),
   require ('./Componentization/Amazon'),
   require ('./Componentization/AmazonComponents'),
   require ('./Componentization/AmazonComponentsComponents'),
@@ -85,6 +93,7 @@ export default [
 
   /* props */
 
+  require ('./Props/Splash'),
   // what the heck is this.props?
   require ('./Props/Props1'),
   require ('./Props/Props2'),
@@ -102,7 +111,6 @@ export default [
 
   require ('./Exercise1/HelloWorldIntro'),
   require ('./Exercise1/HelloWorldIntro2'),
-  require ('./Exercise1/QuickReload'),
   // first: need to pull out <Hello> component
   // second: prop to say hello to different people
   require ('./Exercise1/HelloWorld'),
@@ -119,6 +127,7 @@ export default [
   // so now how do we access that?
   require ('./State/State4'),
   // what the heck just happened
+  require ('./State/WhatJustHappened'),
   // what did the map function return?
   require ('./State/State4Breakdown1'),
   // how does { items } work?
@@ -133,7 +142,6 @@ export default [
 
   require ('./Exercise2/HelloStateIntro'),
   require ('./Exercise2/HelloStateIntro2'),
-  require ('./Exercise1/QuickReload'),
   // use the techniques recently covered in the breakdown to
   // say hello to all the names in this.state.names.
   require ('./Exercise2/HelloState'),

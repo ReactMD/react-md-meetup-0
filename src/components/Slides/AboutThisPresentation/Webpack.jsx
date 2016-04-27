@@ -8,8 +8,9 @@ class Webpack extends React.Component {
       <Slide title="Webpack">
         <ul>
           <li>Bundle source into one file</li>
-          <li>Loaders: .js, .jsx, .css, .less, .png, etc.</li>
-          <li>Easy 'transpilation' integration</li>
+          <li>Loaders: babel-loader, less-loader, image-loader, etc.</li>
+          <li>Allow for bundling .js, .jsx, .css, .less, .png, etc.</li>
+          <li>Easy 'transpilation' integration via loaders</li>
         </ul>
       </Slide>
     )
