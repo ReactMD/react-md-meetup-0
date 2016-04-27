@@ -40,8 +40,6 @@ class Presentation extends React.Component {
       case 38:
       //page up
       case 33:
-      //space
-      case 32:
         this._previousSlide ();
         break;
 
@@ -51,6 +49,8 @@ class Presentation extends React.Component {
       case 40:
       //page down
       case 34:
+      //space
+      case 32:
         this._nextSlide ();
         break;
 
