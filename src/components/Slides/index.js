@@ -184,7 +184,7 @@ export default [
   // slide to edit
   require ('./Exercise3/Counter'),
   // solution
-  require ('./Exercise3/Solution'),
+  //require ('./Exercise3/Solution'),
 
   /* finishing up the todo list */
 
@@ -203,14 +203,14 @@ export default [
 
   /* component lifecycle */
 
+  require ('./Lifecycle/WhyCantI'),
+  require ('./Lifecycle/Splash'),
   // diagram of all of them
-  // TODO
+  require ('./Lifecycle/Diagram'),
   // overview
   require ('./Lifecycle/Overview'),
   // highlight render, scu, cdu
   require ('./Lifecycle/Highlights'),
-  // scu
-  require ('./Lifecycle/ShouldComponentUpdate'),
   // cdu
   require ('./Lifecycle/ComponentDidUpdate'),
 

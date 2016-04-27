@@ -2,20 +2,18 @@ import React from 'react';
 
 import { Slide } from '../../Presentation';
 
-class CDU extends React.Component {
+class Highlights extends React.Component {
   render () {
     return (
-      <Slide title="Component Lifecycle">
-        <p>4 basic categories</p>
+      <Slide title="Quick Highlights">
         <ul>
-          <li>render</li>
-          <li>mounting (componentWillMount, componentDidMount)</li>
-          <li>updating (componentWillReceiveProps, shouldComponentUpdate, componentWillUpdate, componentDidUpdate)</li>
-          <li>unmounting (componentWillUnmount)</li>
+          <li>render()</li>
+          <li>shouldComponentUpdate(nextProps, nextState)</li>
+          <li>componentDidUpdate(prevProps, prevState)</li>
         </ul>
       </Slide>
     )
   }
 }
 
-export default CDU;
+export default Highlights;
