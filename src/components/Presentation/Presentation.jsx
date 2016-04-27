@@ -104,11 +104,11 @@ class Presentation extends React.Component {
     sessionStorage.setItem('slide', slide);
   }
 
-  _previousSlide () {
+  _previousSlide = () => {
     this._gotoSlide(this.state.slideIndex - 1);
   }
 
-  _nextSlide () {
+  _nextSlide = () => {
     this._gotoSlide(this.state.slideIndex + 1);
   }
 
