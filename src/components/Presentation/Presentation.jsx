@@ -48,9 +48,16 @@ class Presentation extends React.Component {
       case 40:
       //page down
       case 34:
+        this._nextSlide ();
+        break;
+
       //space
       case 32:
-        this._nextSlide ();
+        if (!!event.shiftKey) {
+          this._previousSlide();
+        } else {
+          this._nextSlide();
+        }
         break;
 
       //home
