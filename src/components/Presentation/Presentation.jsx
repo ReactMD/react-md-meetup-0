@@ -29,7 +29,7 @@ class Presentation extends React.Component {
 
   _handleKeyPress (event) {
     // not interested when it happens in an input
-    if (event.target.type === 'textarea') return;
+    if (event.target.type === 'textarea' || event.target.type === 'text') return;
 
 
     switch (event.keyCode) {
