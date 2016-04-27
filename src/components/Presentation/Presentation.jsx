@@ -18,6 +18,15 @@ class Presentation extends React.Component {
     window.addEventListener ('keydown', this._handleKeyPress);
   }
 
+  componentDidMount () {
+    //look and see if we saved the slide number to session storage
+    //(i.e. did we just recover from a crash?)
+    if (sessionStorage.slide) {
+      this._gotoSlide(sessionStorage.slide);
+    }
+  }
+
+
   _handleKeyPress (event) {
     // not interested when it happens in an input
     if (event.target.type === 'textarea') return;
@@ -52,8 +61,6 @@ class Presentation extends React.Component {
       case 35:
         this._gotoSlide(this.props.slides.length);
         break;
-      
-  
     }
 
   }
@@ -62,18 +69,17 @@ class Presentation extends React.Component {
     this.setState ({
       slideIndex: Math.max(0, Math.min(this.props.slides.length - 1, slide))
     });
+
+    //set localstorage so we can recover from crashes:
+    sessionStorage.setItem('slide', slide);
   }
 
   _previousSlide () {
-    this.setState ({
-      slideIndex: Math.max (0, this.state.slideIndex - 1)
-    });
+    this._gotoSlide(this.state.slideIndex - 1);
   }
 
   _nextSlide () {
-    this.setState ({
-      slideIndex: Math.min (this.state.slideIndex + 1, this.props.slides.length - 1)
-    });
+    this._gotoSlide(this.state.slideIndex + 1);
   }
 
   render () {
