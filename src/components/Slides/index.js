@@ -215,5 +215,8 @@ export default [
   require ('./ClosingSlides/Feedback'),
   // want to do this more,
   // call for ideas, speakers, etc.
-  require ('./ClosingSlides/FutureEvents')
+  require ('./ClosingSlides/FutureEvents'),
+
+  //Contact info
+  require ('./ClosingSlides/Contact')
 ];
