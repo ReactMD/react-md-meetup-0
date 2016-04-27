@@ -7,7 +7,7 @@ require('./Contact.less');
 class Contact extends React.Component {
   render () {
     return (
-      <Slide className="center-content">
+      <Slide className="center-content contact">
         <img src="images/reactmd_logo-white-07.png" />
         <h3>Keep in touch!</h3>
         <p style={{textAlign: "left"}}>

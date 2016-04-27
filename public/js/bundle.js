@@ -104688,7 +104688,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        _Presentation.Slide,
-	        { className: 'center-content' },
+	        { className: 'center-content contact' },
 	        _react2.default.createElement('img', { src: 'images/reactmd_logo-white-07.png' }),
 	        _react2.default.createElement(
 	          'h3',
@@ -104781,7 +104781,7 @@
 
 
 	// module
-	exports.push([module.id, "ul {\n  list-style-type: none;\n}\nul span {\n  float: left;\n  width: 6em;\n  text-align: right;\n  padding-right: .3em;\n  color: #eee;\n}\n", ""]);
+	exports.push([module.id, ".contact ul {\n  list-style-type: none;\n}\n.contact ul span {\n  float: left;\n  width: 6em;\n  text-align: right;\n  padding-right: .3em;\n  color: #eee;\n}\n", ""]);
 
 	// exports
 
