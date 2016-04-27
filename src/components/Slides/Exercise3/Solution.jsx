@@ -38,7 +38,7 @@ class Counter extends React.Component {
 
   render () {
     return (
-      <Slide title="counter">
+      <Slide title="counter" className="counter">
         <div className="button" onClick={this._increment}>
           Increment
         </div>
