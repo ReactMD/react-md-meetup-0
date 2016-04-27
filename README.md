@@ -18,9 +18,9 @@ npm run dev
 
 Browse to [localhost:3000/webpack-dev-server/](localhost:3000/webpack-dev-server).
 
-### Doing the exercises
+### Exercise-only build
 
-When working through the exercises, run:
+An additional build exists that only includes the exercise slides:
 
 ```shell
 npm run exercises
@@ -28,7 +28,7 @@ npm run exercises
 
 Then, browse to [localhost:3001/webpack-dev-server/](localhost:3001/webpack-dev-server).
 
-The only difference is that this build only contains four slides, so if you make a change that restarts you at the beginning of the deck or you have to refresh manually, you don't have to find your place in the presentation again.
+This is kind of unnecessary now that the slide deck uses `SessionStorage` to track which slide you last looked at and pops you back there if the page gets refreshed.  But, it may still be useful to someone.
 
 This can be run in parallel with `npm run dev`.
 
