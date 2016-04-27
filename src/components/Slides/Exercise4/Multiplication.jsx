@@ -5,6 +5,14 @@ import { Slide } from '../../Presentation';
 // styles specific to the Multiplication component
 require ('./Multiplication.less');
 
+class FactorInput extends React.Component {
+  render () {
+    return (
+      <span>TODO BONUS part 2: implement me</span>
+    );
+  }
+};
+
 class Multiplication extends React.Component {
   constructor (props) {
     super (props);
@@ -43,6 +51,7 @@ class Multiplication extends React.Component {
   }
 
   render () {
+    // TODO Bonus 1: fizzbuzz can be implemented here
     let productDisplay = this.state.product;
 
     return (

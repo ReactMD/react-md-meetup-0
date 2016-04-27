@@ -221,7 +221,7 @@ export default [
   // TODO
   require ('./Exercise4/Multiplication'),
   // solution:
-  require ('./Exercise4/Solution'),
+  // require ('./Exercise4/Solution'),
 
   /* closing slides */
 
