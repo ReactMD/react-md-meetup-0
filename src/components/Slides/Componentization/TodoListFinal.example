@@ -1,0 +1,31 @@
+class TodoListItem extends React.Component {
+  render () {
+    return (
+      <li>{ this.props.description }</li>
+    );
+  }
+}
+
+class TodoList extends React.Component {
+  render () {
+    return (
+      <div className="todolist-container">
+        <div className="new-todo">
+          <input placeholder="What do you have to do?" />
+          <div className="button">
+            Add
+          </div>
+        </div>
+        <div className="todolist">
+          <ul>
+            <TodoListItem description="learn about react" />
+            <TodoListItem description="go to the grocery store" />
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
+
+// particular to formidable/playground
+ReactDOM.render (<TodoList/>, mountNode);

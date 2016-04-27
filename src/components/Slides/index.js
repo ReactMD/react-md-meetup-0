@@ -82,12 +82,21 @@ export default [
   require ('./Componentization/TodoListImgComponents'),
   require ('./Componentization/TodoListImgComponentsComponents'),
   // so back to our code, let's pull out TodoListItem
-  require ('./Componentization/BasicTodoList'),
+  createPlaygroundSlide (
+    require ('raw!./Componentization/BasicTodoList.example'),
+    { title: "Pull out TodoListItem"}
+  ),
   // but now they all say the same thing!  use this.props.children
-  require ('./Componentization/TodoListItem'),
+  createPlaygroundSlide (
+    require ('raw!./Componentization/TodoListItem.example'),
+    { title: "this.props.children"}
+  ),
   // so now we have our TodoList component with TodoListItem separated out
   // Slide using another prop called 'title'
-  require ('./Componentization/TodoListFinal'),
+  createPlaygroundSlide (
+    require ('raw!./Componentization/TodoListFinal.example'),
+    { title: "description prop" }
+  ),
   // Slide does the same thing - watch what happens when we remove it
   require ('./Componentization/TodoListSlide'),
 
@@ -118,6 +127,7 @@ export default [
 
   /* component state */
 
+  require ('./State/Splash'),
   // we want to make our todo list interactive ... right now it just displays stuff
   // we need to store the current list and state of each item
   require ('./State/State1'),
