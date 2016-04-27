@@ -8,9 +8,10 @@ class UpdatingState extends React.Component {
       <Slide title="updating state">
         <ul>
           <li>Constant state isn't that useful...</li>
-          <li>Usually state will be variable</li>
+          <li>My data is variable!</li>
+          <li>React knows this</li>
           <li>Remember, state is immutable</li>
-          <li>Must set via <tt>this.setState ()</tt></li>
+          <li>Must set via <tt>this.setState()</tt></li>
         </ul>
       </Slide>
     );
