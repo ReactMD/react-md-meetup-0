@@ -8,6 +8,9 @@ class Presentation extends React.Component {
     super (props);
 
     this._handleKeyPress = this._handleKeyPress.bind (this);
+    this._previousSlide = this._previousSlide.bind (this);
+    this._nextSlide = this._nextSlide.bind (this);
+    this._gotoSlide = this._gotoSlide.bind (this);
 
     this.state = {
       slideIndex: 0,
