@@ -14,7 +14,7 @@ class Presentation extends React.Component {
 
     this.state = {
       slideIndex: 0,
-      enteredNumber: 0
+      enteredNumber: -1
     };
 
     window.addEventListener ('keydown', this._handleKeyPress);
@@ -113,14 +113,22 @@ class Presentation extends React.Component {
   }
 
   _enterDigit (digit) {
-    this.setState ({
-      enteredNumber: this.state.enteredNumber * 10 + digit
-    });
+    if (this.state.enteredNumber === -1) {
+      this.setState({enteredNumber: digit});
+    } else {
+      this.setState ({
+        enteredNumber: this.state.enteredNumber * 10 + digit
+      });
+    }
   }
 
   _gotoExplicitSlide () {
-    this._gotoSlide(this.state.enteredNumber - 1);
-    this.setState({enteredNumber: 0});
+    if (this.state.enteredNumber === -1) {
+      this._nextSlide();
+    } else {
+      this._gotoSlide(this.state.enteredNumber - 1);
+      this.setState({enteredNumber: -1});
+    }
   }
 
   render () {

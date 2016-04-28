@@ -7,7 +7,7 @@ class Props1 extends React.Component {
     return (
       <Slide title="Props">
         <ul>
-          <li>You can add additional attributes to React elements</li>
+          <li>You can add additional attributes to React components</li>
           <li><pre>{ '<Slide title="todo list">'}</pre></li>
           <li><pre>{ '<Slide title="Props">'}</pre></li>
           <li>These attributes are called 'props'</li>

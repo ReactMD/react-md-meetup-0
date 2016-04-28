@@ -20111,7 +20111,7 @@
 
 	    _this.state = {
 	      slideIndex: 0,
-	      enteredNumber: 0
+	      enteredNumber: -1
 	    };
 
 	    window.addEventListener('keydown', _this._handleKeyPress);
@@ -20205,15 +20205,23 @@
 	  }, {
 	    key: '_enterDigit',
 	    value: function _enterDigit(digit) {
-	      this.setState({
-	        enteredNumber: this.state.enteredNumber * 10 + digit
-	      });
+	      if (this.state.enteredNumber === -1) {
+	        this.setState({ enteredNumber: digit });
+	      } else {
+	        this.setState({
+	          enteredNumber: this.state.enteredNumber * 10 + digit
+	        });
+	      }
 	    }
 	  }, {
 	    key: '_gotoExplicitSlide',
 	    value: function _gotoExplicitSlide() {
-	      this._gotoSlide(this.state.enteredNumber - 1);
-	      this.setState({ enteredNumber: 0 });
+	      if (this.state.enteredNumber === -1) {
+	        this._nextSlide();
+	      } else {
+	        this._gotoSlide(this.state.enteredNumber - 1);
+	        this.setState({ enteredNumber: -1 });
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -108897,7 +108905,7 @@
 
 
 	// module
-	exports.push([module.id, ".slide {\n  color: white;\n  /* any nested slides shouldn't have backgrounds */\n}\n.slide:not(.nested) {\n  display: flex;\n  flex-direction: column;\n  max-height: 100%;\n  overflow: hidden;\n  padding: 0 5%;\n  background-color: blue;\n  background: url(" + __webpack_require__(484) + ") no-repeat center center fixed;\n  background-size: cover;\n}\n.slide:not(.nested) > .content,\n.slide:not(.nested) > .content-wide {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  padding: 25px 15px 25px 15px;\n}\n.slide.counter .button {\n  width: 33%;\n  min-width: 275px;\n  margin: 0 auto;\n}\n.slide.counter input {\n  width: 33%;\n  margin: 10 auto;\n  padding-left: 10px;\n  padding-right: 10px;\n  border-radius: 8px;\n}\n.slide .slide {\n  background: none;\n}\n.slide .title {\n  min-height: 100px;\n  padding: 50px 0 15px 0;\n  text-align: center;\n  margin: auto;\n  font-weight: bold;\n  font-size: 5em;\n}\n.slide .content,\n.slide .content-wide {\n  width: 100%;\n}\n.slide .content ul,\n.slide .content-wide ul {\n  margin: 0;\n}\n.slide .content {\n  font-size: 2.5rem;\n}\n.slide .content li {\n  line-height: 1.5em;\n}\n.slide .button {\n  -webkit-border-radius: 8;\n  -moz-border-radius: 8;\n  border-radius: 8px;\n  color: #000000;\n  font-size: 47px;\n  font-weight: bold;\n  background: #FCFF42;\n  padding: 10px 20px 10px 20px;\n  text-decoration: none;\n  text-align: center;\n}\n.slide .button:hover {\n  background: #A6FF2F;\n  cursor: pointer;\n  text-decoration: none;\n}\n.slide .content-wide {\n  width: 100%;\n}\n.slide .content-wide .playground {\n  flex: 1;\n  overflow: hidden;\n}\n.slide .content-wide .playground .playgroundCode {\n  width: 50%;\n  font-size: 2em;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.slide .content-wide .playground .playgroundPreview {\n  width: 50%;\n  font-size: 2em;\n}\n.slide .content-wide .CodeMirror {\n  background-color: rgba(0, 0, 0, 0);\n}\n.slide .content-wide .CodeMirror-scroll {\n  padding: 5%;\n}\n.center-content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n}\n.center-content h1 {\n  font-size: 4em;\n}\n.center-content img {\n  max-width: 100%;\n}\n@media only screen and (min-width: 1250px) {\n  .nested .title {\n    font-size: 7vw;\n  }\n}\n@media only screen and (max-width: 1249px) {\n  .nested .title {\n    font-size: 2em;\n  }\n}\n.nested .content {\n  margin: auto;\n  padding: 25px;\n}\nimg.amazon,\nimg.todo,\nimg.lifecycle {\n  height: 93%;\n  display: block;\n  margin: auto;\n}\n", ""]);
+	exports.push([module.id, ".slide {\n  color: white;\n  /* any nested slides shouldn't have backgrounds */\n}\n.slide:not(.nested) {\n  display: flex;\n  flex-direction: column;\n  max-height: 100%;\n  overflow: hidden;\n  padding: 0 5%;\n  background-color: blue;\n  background: url(" + __webpack_require__(484) + ") no-repeat center center fixed;\n  background-size: cover;\n}\n.slide:not(.nested) > .content,\n.slide:not(.nested) > .content-wide {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  overflow: auto;\n  padding: 25px 15px 25px 15px;\n}\n.slide.counter .button {\n  width: 33%;\n  min-width: 275px;\n  margin: 0 auto;\n}\n.slide.counter input {\n  width: 33%;\n  margin: 10 auto;\n  padding-left: 10px;\n  padding-right: 10px;\n  border-radius: 8px;\n}\n.slide .slide {\n  background: none;\n}\n.slide .title {\n  min-height: 100px;\n  padding: 50px 0 15px 0;\n  text-align: center;\n  margin: auto;\n  font-weight: bold;\n  font-size: 5em;\n}\n.slide .content,\n.slide .content-wide {\n  width: 100%;\n}\n.slide .content ul,\n.slide .content-wide ul {\n  margin: 0;\n}\n.slide .content {\n  font-size: 2.5rem;\n}\n.slide .content li {\n  line-height: 1.5em;\n}\n.slide .button {\n  -webkit-border-radius: 8;\n  -moz-border-radius: 8;\n  border-radius: 8px;\n  color: #000000;\n  font-size: 47px;\n  font-weight: bold;\n  background: #FCFF42;\n  padding: 10px 20px 10px 20px;\n  text-decoration: none;\n  text-align: center;\n  /* <3 stack overflow */\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Chrome/Safari/Opera */\n  -khtml-user-select: none;\n  /* Konqueror */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                    not supported by any browser */\n}\n.slide .button:hover {\n  background: #A6FF2F;\n  cursor: pointer;\n  text-decoration: none;\n}\n.slide .content-wide {\n  width: 100%;\n}\n.slide .content-wide .playground {\n  flex: 1;\n  overflow: hidden;\n}\n.slide .content-wide .playground .playgroundCode {\n  width: 50%;\n  font-size: 2em;\n  background-color: rgba(0, 0, 0, 0.6);\n}\n.slide .content-wide .playground .playgroundPreview {\n  width: 50%;\n  font-size: 2em;\n}\n.slide .content-wide .CodeMirror {\n  background-color: rgba(0, 0, 0, 0);\n}\n.slide .content-wide .CodeMirror-scroll {\n  padding: 5%;\n}\n.center-content {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n}\n.center-content h1 {\n  font-size: 4em;\n}\n.center-content img {\n  max-width: 100%;\n}\n@media only screen and (min-width: 1250px) {\n  .nested .title {\n    font-size: 7vw;\n  }\n}\n@media only screen and (max-width: 1249px) {\n  .nested .title {\n    font-size: 2em;\n  }\n}\n.nested .content {\n  margin: auto;\n  padding: 25px;\n}\nimg.amazon,\nimg.todo,\nimg.lifecycle {\n  height: 93%;\n  display: block;\n  margin: auto;\n}\n", ""]);
 
 	// exports
 
@@ -113333,7 +113341,7 @@
 	          _react2.default.createElement(
 	            'li',
 	            null,
-	            'You can add additional attributes to React elements'
+	            'You can add additional attributes to React components'
 	          ),
 	          _react2.default.createElement(
 	            'li',
