@@ -1,6 +1,10 @@
 # React MD Meetup
 
-This is the presentation for the first React MD meetup hosted by Visionist.
+This is the presentation for the first [React MD Meetup](http://www.meetup.com/React-MD/).
+
+## Demo
+
+[http://reactmd.github.io/react-md-meetup-0/](http://reactmd.github.io/react-md-meetup-0/)
 
 ## Goals
 
